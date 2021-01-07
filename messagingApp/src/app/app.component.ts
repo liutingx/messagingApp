@@ -50,7 +50,6 @@ export class AppComponent implements OnInit, OnDestroy {
     }
       else{
         this.text = 'Join'
-        //this.chatSvc.sendMessage(`Goodbye! ${name} has left`)
         this.chatSvc.leave()
         this.event$.unsubscribe()
         this.event$ = null
@@ -59,7 +58,6 @@ export class AppComponent implements OnInit, OnDestroy {
     else{
       alert('Fill in your username')
     }
-    
   }
 
   sendMessage(){
